@@ -5,16 +5,23 @@ namespace Slutprojektet
     public class Character
     {
         public Texture2D PlayerModel;
-        float WalkSpeed = 2f;
+        float WalkSpeed = 4f;
         public Rectangle player;
+        public List<string> Inventory;
+        
 
         public Character(Texture2D playerModel)
         {
             PlayerModel = playerModel;
             player = new Rectangle(415, 60, PlayerModel.Width, PlayerModel.Height);
+            Inventory = new List<string>();
+        }
+    
+        public void AddToInventory(string item)
+        {
+            Inventory.Add(item);
         }
 
-        
 
 
     public void Update()
@@ -58,6 +65,9 @@ namespace Slutprojektet
                 player.Y = 0;
             }
         }
+    
+       
+
     }
 }
 }
