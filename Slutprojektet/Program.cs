@@ -15,7 +15,6 @@ Texture2D HouseImage = Raylib.LoadTexture("HouseImage.png");
 Texture2D wrenchTexture = Raylib.LoadTexture("WrenchImage.png");
 
 character = new Character(playerModel);
-bool hasWrench = false;
 List<string> inventory = new List<string>();
 
 
@@ -38,12 +37,10 @@ while (Raylib.WindowShouldClose() == false)
 
         if (Raylib.CheckCollisionRecs(character.player, wrenchRect))
         {
-            hasWrench = true;
+            house.hasWrench = true;
             wrenchRect.X = -10000;
-            wrenchRect.Y = -10000;  // VARFÖR FUNKAR DET INTE JAG BLIR GALEN ;( ;( ;(
+            wrenchRect.Y = -10000;  
             character.AddToInventory("Wrench");
-            System.Console.WriteLine("this shit work?");
-
         }
     }
 
