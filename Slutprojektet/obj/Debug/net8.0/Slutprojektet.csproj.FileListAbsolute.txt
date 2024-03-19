@@ -25,3 +25,4 @@ c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\
 c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\HouseImage.png
 c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\obj\Debug\net8.0\Slutprojektet.sourcelink.json
 c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\WrenchImage.png
+c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\DoorImage.png

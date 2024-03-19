@@ -1,4 +1,7 @@
 using Raylib_cs;
+using System.Collections.Generic;
+using System.Numerics;
+
 
 namespace Slutprojektet
 {
@@ -8,7 +11,8 @@ namespace Slutprojektet
         float WalkSpeed = 4f;
         public Rectangle player;
         public List<string> Inventory;
-        
+        public string currentScene;
+
 
         public Character(Texture2D playerModel)
         {
@@ -20,6 +24,12 @@ namespace Slutprojektet
         public void AddToInventory(string item)
         {
             Inventory.Add(item);
+        }
+
+         public void SetPosition(Vector2 position)
+        {
+            player.X = position.X;
+            player.Y = position.Y;
         }
 
 

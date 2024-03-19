@@ -13,6 +13,8 @@ Texture2D playerModel = Raylib.LoadTexture("CharacterImage.png");
 Texture2D outsideImage = Raylib.LoadTexture("OutsideBackground.png");
 Texture2D HouseImage = Raylib.LoadTexture("HouseImage.png");
 Texture2D wrenchTexture = Raylib.LoadTexture("WrenchImage.png");
+Texture2D doorImage = Raylib.LoadTexture("DoorImage.png");
+
 
 character = new Character(playerModel);
 List<string> inventory = new List<string>();
@@ -24,16 +26,23 @@ while (Raylib.WindowShouldClose() == false)
     Raylib.BeginDrawing();
     Raylib.ClearBackground(backgroundcolor);
 
-    if (currentScene == "StartScreen")
+    if (currentScene == "outside")
     {
-    outside.DrawOutsideroomScene(character, outsideImage);
+    outside.DrawOutsideroomScene(character, outsideImage, doorImage);
     character.Update();
+
+
+    if (character.currentScene == "HouseScene")
+        {
+            currentScene = "HouseScene";
+        }
     }
     
     else if (currentScene == "HouseScene")
     {
-        house.DrawInsideHouseScene(character, HouseImage, wrenchTexture);
-        Rectangle wrenchRect = new Rectangle(600, 700, wrenchTexture.Width, wrenchTexture.Height);
+        house.DrawInsideHouseScene(character, HouseImage, wrenchTexture, doorImage);
+        Rectangle wrenchRect = new Rectangle(1100, 500, wrenchTexture.Width, wrenchTexture.Height);
+
 
         if (Raylib.CheckCollisionRecs(character.player, wrenchRect))
         {
@@ -42,10 +51,14 @@ while (Raylib.WindowShouldClose() == false)
             wrenchRect.Y = -10000;  
             character.AddToInventory("Wrench");
         }
+
+        if (character.currentScene == "outside")
+        {
+            currentScene = "outside";
+        }
     }
 
 
-    //if (hasWrench) {}
 
 
     Raylib.EndDrawing();
