@@ -9,6 +9,7 @@ House house = new House();
 Character character;
 string currentScene = "HouseScene";
 Color backgroundcolor = new Color(255, 255, 255, 255);
+Texture2D berryImage = Raylib.LoadTexture("berry.png");
 Texture2D playerModel = Raylib.LoadTexture("CharacterImage.png");
 Texture2D outsideImage = Raylib.LoadTexture("OutsideBackground.png");
 Texture2D HouseImage = Raylib.LoadTexture("HouseImage.png");
@@ -28,8 +29,26 @@ while (Raylib.WindowShouldClose() == false)
 
     if (currentScene == "outside")
     {
-    outside.DrawOutsideroomScene(character, outsideImage, doorImage);
+    outside.DrawOutsideroomScene(character, outsideImage, doorImage, wrenchTexture, berryImage); 
     character.Update();
+
+    Rectangle brokenCar = new Rectangle(1050, 230, wrenchTexture.Width, wrenchTexture.Height);
+    if (Raylib.CheckCollisionRecs(character.player, brokenCar) && house.hasWrench)
+    {
+        outside.workingCar = true;
+        character.AddToInventory("Car");
+     }
+
+    Rectangle berry1 = new Rectangle(300, 560, wrenchTexture.Width, wrenchTexture.Height);
+    Rectangle berry2 = new Rectangle(400, 560, wrenchTexture.Width, wrenchTexture.Height);
+    Rectangle berry3 = new Rectangle(500, 560, wrenchTexture.Width, wrenchTexture.Height);
+
+    if (Raylib.CheckCollisionRecs(character.player, berry1))
+    {
+         outside.allBerries = true;
+     }
+
+
 
 
     if (character.currentScene == "HouseScene")
