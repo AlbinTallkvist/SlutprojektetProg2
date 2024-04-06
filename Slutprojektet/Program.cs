@@ -31,6 +31,11 @@ while (Raylib.WindowShouldClose() == false)
     {
     outside.DrawOutsideroomScene(character, outsideImage, doorImage, wrenchTexture, berryImage); 
     character.Update();
+    Raylib.DrawText("Objectives", 5, 10, 35, Color.Red);
+    Raylib.DrawText("#1 Fix The Car", 5, 50, 30, Color.Red);
+    Raylib.DrawText("#2 Collect Berries", 5, 80, 30, Color.Red);
+    Raylib.DrawText("#3 Go to Sleep", 5, 110, 30, Color.Red);
+
 
     Rectangle brokenCar = new Rectangle(1050, 230, wrenchTexture.Width, wrenchTexture.Height);
     if (Raylib.CheckCollisionRecs(character.player, brokenCar) && house.hasWrench)
@@ -39,14 +44,26 @@ while (Raylib.WindowShouldClose() == false)
         character.AddToInventory("Car");
      }
 
-    Rectangle berry1 = new Rectangle(300, 560, wrenchTexture.Width, wrenchTexture.Height);
-    Rectangle berry2 = new Rectangle(400, 560, wrenchTexture.Width, wrenchTexture.Height);
-    Rectangle berry3 = new Rectangle(500, 560, wrenchTexture.Width, wrenchTexture.Height);
+    List<Rectangle> berryRectangles = new List<Rectangle>();
+    berryRectangles.Add(new Rectangle(300, 560, wrenchTexture.Width, wrenchTexture.Height));
+    berryRectangles.Add(new Rectangle(400, 560, wrenchTexture.Width, wrenchTexture.Height));
+    berryRectangles.Add(new Rectangle(500, 560, wrenchTexture.Width, wrenchTexture.Height));
 
-    if (Raylib.CheckCollisionRecs(character.player, berry1))
+    foreach (Rectangle berry in berryRectangles)
     {
-         outside.allBerries = true;
-     }
+        if (Raylib.CheckCollisionRecs(character.player, berry))
+        {
+            berryRectangles.Remove(berry);
+            character.AddToInventory("Berry");
+            break;
+        }
+    }
+
+    foreach (Rectangle berry in berryRectangles)
+    {
+        Raylib.DrawTexture(wrenchTexture, (int)berry.X, (int)berry.Y, Color.White);
+    }
+
 
 
 
@@ -61,6 +78,11 @@ while (Raylib.WindowShouldClose() == false)
     {
         house.DrawInsideHouseScene(character, HouseImage, wrenchTexture, doorImage);
         Rectangle wrenchRect = new Rectangle(1100, 500, wrenchTexture.Width, wrenchTexture.Height);
+        Raylib.DrawText("Objectives", 5, 10, 35, Color.Red);
+        Raylib.DrawText("#1 Fix The Car", 5, 50, 30, Color.Red);
+        Raylib.DrawText("#2 Collect Berries", 5, 80, 30, Color.Red);
+        Raylib.DrawText("#3 Go to Sleep", 5, 110, 30, Color.Red);
+
 
 
         if (Raylib.CheckCollisionRecs(character.player, wrenchRect))
