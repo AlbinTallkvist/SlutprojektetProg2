@@ -42,6 +42,7 @@ while (Raylib.WindowShouldClose() == false)
     {
         outside.workingCar = true;
         character.AddToInventory("Car");
+        System.Console.WriteLine("Car Fixed");
      }
 
     List<Rectangle> berryRectangles = new List<Rectangle>();
@@ -55,6 +56,7 @@ while (Raylib.WindowShouldClose() == false)
         {
             berryRectangles.Remove(berry);
             character.AddToInventory("Berry");
+            System.Console.WriteLine("Berry collected");
             break;
         }
     }
@@ -101,6 +103,13 @@ while (Raylib.WindowShouldClose() == false)
 
 
 
+        // ADDA HÄR GÅ LÄGG DIG SAKEN
+        Rectangle bedSleep = new Rectangle(675, 200, doorImage.Width, doorImage.Height);
+        if (Raylib.CheckCollisionRecs(character.player, bedSleep) && inventory.Contains("Car") && inventory.Contains("Berry"))
+        {
+            Console.WriteLine("WHY WONT THIS WORK");
+            System.Environment.Exit(1);
+        }
 
     Raylib.EndDrawing();
 }

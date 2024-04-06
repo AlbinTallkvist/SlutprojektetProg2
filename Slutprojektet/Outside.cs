@@ -14,7 +14,8 @@ namespace Slutprojektet
             Raylib.DrawTexture(outsideImage, 0, 0, Color.White);
             Raylib.DrawTexture(character.PlayerModel, (int)character.player.X, (int)character.player.Y, Color.White);
 
-            //berries
+
+            //berries 1050, 230
 
             Rectangle sceneChangeToHouse = new Rectangle(300, 110, doorImage.Width, doorImage.Height);
             Raylib.DrawTexture(doorImage, 300, 110, Color.White);
