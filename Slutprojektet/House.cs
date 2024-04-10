@@ -13,11 +13,17 @@ namespace Slutprojektet
 
             Raylib.DrawTexture(HouseImage, 0, 0, Color.White);
             Raylib.DrawTexture(character.PlayerModel, (int)character.player.X, (int)character.player.Y, Color.White);
-            Raylib.DrawTexture(wrenchTexture, 675, 200, Color.White);
+            Raylib.DrawTexture(doorImage, 675, 200, Color.White);
 
             Rectangle sceneChangeToOutside = new Rectangle(600, 650, doorImage.Width, doorImage.Height);
             Raylib.DrawTexture(doorImage, 600, 630, Color.White);
             Vector2 newPosition = new Vector2(300, 300); 
+
+            Rectangle bedSleep = new Rectangle(675, 200, doorImage.Width, doorImage.Height);
+            if (Raylib.CheckCollisionRecs(character.player, bedSleep) && character.Inventory.Contains("Car") && character.Inventory.Contains("Berry"))
+            {
+                System.Environment.Exit(1);
+            }
 
             if (!hasWrench)
             {

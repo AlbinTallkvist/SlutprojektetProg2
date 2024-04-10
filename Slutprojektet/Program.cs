@@ -18,7 +18,6 @@ Texture2D doorImage = Raylib.LoadTexture("DoorImage.png");
 
 
 character = new Character(playerModel);
-List<string> inventory = new List<string>();
 
 
 while (Raylib.WindowShouldClose() == false)
@@ -104,12 +103,7 @@ while (Raylib.WindowShouldClose() == false)
 
 
         // ADDA HÄR GÅ LÄGG DIG SAKEN
-        Rectangle bedSleep = new Rectangle(675, 200, doorImage.Width, doorImage.Height);
-        if (Raylib.CheckCollisionRecs(character.player, bedSleep) && inventory.Contains("Car") && inventory.Contains("Berry"))
-        {
-            Console.WriteLine("WHY WONT THIS WORK");
-            System.Environment.Exit(1);
-        }
+        
 
     Raylib.EndDrawing();
 }
