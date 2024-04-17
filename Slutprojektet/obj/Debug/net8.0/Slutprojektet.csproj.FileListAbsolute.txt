@@ -20,11 +20,11 @@ c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\obj\Debug\net8.0\
 c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\obj\Debug\net8.0\Slutprojektet.pdb
 c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\obj\Debug\net8.0\Slutprojektet.genruntimeconfig.cache
 c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\obj\Debug\net8.0\ref\Slutprojektet.dll
-c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\CharacterImage.png
-c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\OutsideBackground.png
-c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\HouseImage.png
 c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\obj\Debug\net8.0\Slutprojektet.sourcelink.json
-c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\WrenchImage.png
-c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\DoorImage.png
 c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\berry.png
 c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\barry.png
+c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\CharacterImage.png
+c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\DoorImage.png
+c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\HouseImage.png
+c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\OutsideBackground.png
+c:\Users\albin.tallkvist\Documents\Slutprojektet\Slutprojektet\bin\Debug\net8.0\WrenchImage.png

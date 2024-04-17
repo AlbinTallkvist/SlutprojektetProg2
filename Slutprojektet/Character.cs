@@ -7,13 +7,14 @@ namespace Slutprojektet
 {
     public class Character
     {
+        // Saker som behövs för spel ska funka, karaktärs speed, list:n, världen 
         public Texture2D PlayerModel;
         float WalkSpeed = 4f;
         public Rectangle player;
         public List<string> Inventory;
         public string currentScene;
 
-
+        // Skapar kontrollerbara rektangeln/huvudkaraktären med sprites/bilderna som laddades in & skapa Inventory list  
         public Character(Texture2D playerModel)
         {
             PlayerModel = playerModel;
@@ -21,11 +22,13 @@ namespace Slutprojektet
             Inventory = new List<string>();
         }
     
+        // skapar en metod "addtoinventory" som lägger till en string (item) i inventoryn
         public void AddToInventory(string item)
         {
             Inventory.Add(item);
         }
 
+        // uppdatera spelarens position genom att tilldela de nya x och y världen till spelarens position (så att jag kan ändra start-position i ny map)
          public void SetPosition(Vector2 position)
         {
             player.X = position.X;
@@ -33,7 +36,7 @@ namespace Slutprojektet
         }
 
 
-
+    // Movement-controls i spelet, WASD för röra sig
     public void Update()
     {
         if (Raylib.IsKeyDown(KeyboardKey.D))

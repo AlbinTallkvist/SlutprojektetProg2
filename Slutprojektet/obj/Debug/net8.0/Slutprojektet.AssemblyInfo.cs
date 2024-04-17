@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Slutprojektet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0afef149e63c46d5a42374af14187876d7ac278e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b69e027415df3807596de97225533a94c82fe1d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Slutprojektet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Slutprojektet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

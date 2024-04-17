@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\albin.tallkvist\\Documents\\Slutprojektet\\Slutprojektet\\Slutprojektet.csproj": {}
+    "C:\\Users\\albin.tallkvist\\Documents\\Slutprojektet\\Slutprojektet\\Slutprojektet.csproj": {}
   },
   "projects": {
-    "c:\\Users\\albin.tallkvist\\Documents\\Slutprojektet\\Slutprojektet\\Slutprojektet.csproj": {
+    "C:\\Users\\albin.tallkvist\\Documents\\Slutprojektet\\Slutprojektet\\Slutprojektet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\albin.tallkvist\\Documents\\Slutprojektet\\Slutprojektet\\Slutprojektet.csproj",
+        "projectUniqueName": "C:\\Users\\albin.tallkvist\\Documents\\Slutprojektet\\Slutprojektet\\Slutprojektet.csproj",
         "projectName": "Slutprojektet",
-        "projectPath": "c:\\Users\\albin.tallkvist\\Documents\\Slutprojektet\\Slutprojektet\\Slutprojektet.csproj",
+        "projectPath": "C:\\Users\\albin.tallkvist\\Documents\\Slutprojektet\\Slutprojektet\\Slutprojektet.csproj",
         "packagesPath": "C:\\Users\\albin.tallkvist\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\albin.tallkvist\\Documents\\Slutprojektet\\Slutprojektet\\obj\\",
+        "outputPath": "C:\\Users\\albin.tallkvist\\Documents\\Slutprojektet\\Slutprojektet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
